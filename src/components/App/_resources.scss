@@ -1,1 +1,17 @@
 // Add sass variables, mixins, etc here!
+
+$text-color-primary: #ddd;
+$text-color-secondary: #bbb;
+$text-color-tertiary: #999;
+
+$border-color-primary: #ddd;
+$border-color-secondary: #bbb;
+$border-color-highlight: #999;
+
+@mixin breakpoint($bp) {
+  @if $bp == large {
+    @media (min-width: 800px) { @content; }
+  } @else {
+    @error quote('You have provided an invalid breakpoint to the breakpoint mixin. Valid values: `small`, `medium`, `large`.');
+  }
+}

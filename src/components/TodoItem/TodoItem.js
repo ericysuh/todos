@@ -1,12 +1,12 @@
 import React from 'react';
 
+import './TodoItem.scss';
+
 const TodoItem = () => (
-  <div>
-    <input type="checkbox" />
-    <li>Todo List 1</li>
-    <li>Todo List 2</li>
-    <li>Todo List 3</li>
-    <button type="button">X</button>
+  <div className="todo-item">
+    <input className="todo-item__toggle" type="checkbox" />
+    <li className="todo-item__label">Todo Items</li>
+    <button className="todo-item__delete" type="button">X</button>
   </div>
 );
 

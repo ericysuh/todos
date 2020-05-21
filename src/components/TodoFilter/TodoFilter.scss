@@ -1,0 +1,27 @@
+$parent-class: '.todo-filter';
+
+#{$parent-class} {
+  display: inline-block;
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    color: $text-color-primary;
+    text-decoration: none;
+
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    outline: none;
+    
+    &:focus,
+    &:hover {
+      border-color: $border-color-primary;
+    }
+  }
+}

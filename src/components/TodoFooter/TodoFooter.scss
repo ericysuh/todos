@@ -1,0 +1,30 @@
+$parent-class: '.todo-footer';
+
+#{$parent-class} {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 10px 15px;
+
+  color: $text-color-secondary;
+  font-weight: 300;
+
+  &__count {
+    padding: 4px 0;
+  }
+
+  &__filters {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
+@include breakpoint(large) {
+  #{$parent-class} {
+    grid-template-columns: 2fr 3fr 2fr;
+
+    &__filters {
+      text-align: center;
+    }
+  }
+}

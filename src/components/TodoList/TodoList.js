@@ -1,6 +1,13 @@
 import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 
-const TodoList = () => <TodoItem />;
+import './TodoList.scss';
 
+const TodoList = () => (
+  <ul className="todo-list">
+    <TodoItem />
+    <TodoItem />
+    <TodoItem />
+  </ul>
+);
 export default TodoList;

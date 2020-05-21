@@ -8,9 +8,11 @@ import './App.scss';
 const App = () => (
   <>
     <h1>todos</h1>
-    <TodoAdd />
-    <TodoList />
-    <TodoFooter />
+    <section className="todo">
+      <TodoAdd />
+      <TodoList />
+      <TodoFooter />
+    </section>
   </>
 );
 
