@@ -1,13 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import TodoItem from '../TodoItem/TodoItem';
 
 import './TodoList.scss';
 
-const TodoList = () => (
+const mapState = (state) => ({
+  todos: state.todos
+});
+
+const TodoList = ({ todos }) => (
   <ul className="todo-list">
-    <TodoItem />
-    <TodoItem />
-    <TodoItem />
+    {todos.map((todo) => <TodoItem key={todo.id} {...todo} />)}
   </ul>
 );
-export default TodoList;
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.object
+  ).isRequired
+};
+
+export default connect(mapState)(TodoList);
