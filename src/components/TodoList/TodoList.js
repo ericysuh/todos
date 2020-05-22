@@ -5,9 +5,23 @@ import TodoItem from '../TodoItem/TodoItem';
 
 import './TodoList.scss';
 
-const mapState = (state) => ({
-  todos: state.todos
-});
+// const mapState = (state) => ({
+//   todos: state.todos
+// });
+
+const mapState = (state) => {
+  let filteredTodos;
+  if (state.filters.visibility === 'completed') {
+    filteredTodos = state.todos.filter((todo) => todo.completed);
+  } else if (state.filters.visibility === 'active') {
+    filteredTodos = state.todos.filter((todo) => !todo.completed);
+  } else {
+    filteredTodos = state.todos;
+  }
+  return {
+    todos: filteredTodos
+  };
+};
 
 const TodoList = ({ todos }) => (
   <ul className="todo-list">

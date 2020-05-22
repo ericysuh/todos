@@ -23,5 +23,16 @@ $parent-class: '.todo-filter';
     &:hover {
       border-color: $border-color-primary;
     }
+
+    &--selected {
+      border-color: $border-color-secondary;
+      color: $text-color-secondary;
+
+      &:focus,
+      &hover {
+        border-color: $border-color-highlight;
+        color: $text-color-tertiary;
+      }
+    }
   }
 }
