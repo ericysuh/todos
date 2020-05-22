@@ -28,7 +28,7 @@ const TodoItem = (props) => {
   return (
     <li className="todo-item">
       <input className="todo-item__toggle" type="checkbox" onClick={handleToggle} />
-      <input className={todoLabelClass} value={text} />
+      <input className={todoLabelClass} defaultValue={text} />
       <button className="todo-item__delete" type="button" onClick={handleDelete}>X</button>
     </li>
   );

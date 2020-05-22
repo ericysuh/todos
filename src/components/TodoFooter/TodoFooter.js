@@ -1,19 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getFiltersState, getNumOfActiveItems } from '../../redux/selectors';
 import TodoFilter from '../TodoFilter/TodoFilter';
 
 import './TodoFooter.scss';
 
-const mapState = (state) => {
-  const activeTodos = state.todos.filter((todo) => !todo.completed);
-
-  return {
-    numOfActive: activeTodos.length,
-    list: state.filters.list,
-    visibility: state.filters.visibility
-  };
-};
+const mapState = (state) => ({
+  numOfActive: getNumOfActiveItems(state),
+  list: getFiltersState(state).list,
+  visibility: getFiltersState(state).visibility
+});
 
 const TodoFooter = ({ numOfActive, list, visibility }) => (
   <div className="todo-footer">
