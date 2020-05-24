@@ -20,9 +20,9 @@ const TodoFilter = (props) => {
   });
 
   return (
-    <section className="todo-filter">
+    <li className="todo-filter">
       <a href="/" className={filterLinkClass} onClick={handleClick}>{type}</a>
-    </section>
+    </li>
   );
 };
 

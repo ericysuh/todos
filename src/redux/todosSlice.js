@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { v4 as uuidv4 } from 'uuid';
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -16,6 +17,10 @@ const todosSlice = createSlice({
       const index = state.findIndex((item) => item.id === action.payload);
       state.splice(index, 1);
     },
+    editTodo: (state, action) => {
+      const index = state.findIndex((item) => item.id === action.payload.todoId);
+      state[index].text = action.payload.newText;
+    },
     removeCompletedTodos: (state) => (
       // for (let i = state.length - 1; i >= 0; i--) {
       //   if (state[i].completed) state.splice(i, 1);
@@ -27,5 +32,5 @@ const todosSlice = createSlice({
 
 export default todosSlice.reducer;
 export const {
-  addTodo, toggleTodo, removeTodo, removeCompletedTodos
+  addTodo, toggleTodo, removeTodo, removeCompletedTodos, editTodo
 } = todosSlice.actions;

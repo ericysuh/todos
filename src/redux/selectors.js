@@ -2,6 +2,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 const getTodos = (state) => state.todos;
 const getFilters = (state) => state.filters;
+
 const getVisibility = createSelector(
   [getFilters],
   (filters) => filters.visibility
