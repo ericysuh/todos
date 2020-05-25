@@ -1,30 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getFiltersState, getNumOfActiveItems } from '../../redux/selectors';
-import TodoFilter from '../TodoFilter/TodoFilter';
-import ClearCompleted from '../ClearCompleted/ClearCompleted';
+import { getFiltersState } from '../../redux/selectors';
+import ActiveTodosCount from './components/ActiveTodosCount/ActiveTodosCount';
+import TodoFilter from './components/TodoFilter/TodoFilter';
+import ClearCompleted from './components/ClearCompleted/ClearCompleted';
 
 import './TodoFooter.scss';
 
 const mapState = (state) => ({
-  numOfActive: getNumOfActiveItems(state),
-  list: getFiltersState(state).list,
+  filterList: getFiltersState(state).list,
   visibility: getFiltersState(state).visibility,
-  todos: state.todos,
+  hasTodos: state.todos.length > 0,
 });
 
 const TodoFooter = ({
-  numOfActive, list, visibility, todos,
+  filterList, visibility, hasTodos,
 }) => {
-  if (!todos.length) return null;
+  if (!hasTodos) return null;
+
   return (
     <div className="todo-footer">
-      <span className="todo-footer__count">{numOfActive} item left</span>
+      <ActiveTodosCount />
       <ul className="todo-footer__filters">
-        {list.map((item) => {
+        {filterList.map((item) => {
           const selected = (item.type === visibility);
-          return <TodoFilter type={item.type} key={`filter-${item.type}`} selected={selected} />;
+          return <TodoFilter {...item} key={`filter-${item.type}`} selected={selected} />;
         })}
       </ul>
       <ClearCompleted />
@@ -33,12 +34,11 @@ const TodoFooter = ({
 };
 
 TodoFooter.propTypes = {
-  numOfActive: PropTypes.number.isRequired,
-  list: PropTypes.arrayOf(
+  filterList: PropTypes.arrayOf(
     PropTypes.object
   ).isRequired,
   visibility: PropTypes.oneOf(['all', 'active', 'completed']).isRequired,
-  todos: PropTypes.arrayOf(PropTypes.object).isRequired
+  hasTodos: PropTypes.bool.isRequired
 };
 
 export default connect(mapState)(TodoFooter);

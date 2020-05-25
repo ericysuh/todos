@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { changeFilter } from '../../redux/filtersSlice';
+import { changeFilter } from '../../../../redux/filtersSlice';
 import './TodoFilter.scss';
 
 const mapDispatch = { changeFilter };
 
-const TodoFilter = (props) => {
-  const { changeFilter, type, selected } = props;
-
+const TodoFilter = ({
+  changeFilter, type, copy, selected
+}) => {
   const handleClick = (event) => {
     event.preventDefault();
     changeFilter(type);
@@ -21,13 +21,14 @@ const TodoFilter = (props) => {
 
   return (
     <li className="todo-filter">
-      <a href="/" className={filterLinkClass} onClick={handleClick}>{type}</a>
+      <a href="/" className={filterLinkClass} onClick={handleClick}>{copy}</a>
     </li>
   );
 };
 
 TodoFilter.propTypes = {
   changeFilter: PropTypes.func.isRequired,
+  copy: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired
 };

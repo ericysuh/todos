@@ -8,20 +8,22 @@ const mapDispatch = { addTodo };
 
 const TodoAdd = ({ addTodo }) => {
   const [text, setText] = useState('');
-  const handleInput = (event) => setText(event.target.value);
-  const handleEnter = (event) => {
-    if (event.keyCode !== 13) return;
-    const text = event.target.value;
+
+  const handleChange = (event) => setText(event.target.value);
+
+  const handleKeyUp = (event) => {
+    if (!text.length || event.key !== 'Enter') return;
     addTodo(text);
     setText('');
   };
+
   return (
     <input
       className="todo-add"
       type="text"
       placeholder="What needs to be done?"
-      onChange={handleInput}
-      onKeyUp={handleEnter}
+      onChange={handleChange}
+      onKeyUp={handleKeyUp}
       value={text}
     />
   );

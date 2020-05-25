@@ -21,12 +21,7 @@ const todosSlice = createSlice({
       const index = state.findIndex((item) => item.id === action.payload.todoId);
       state[index].text = action.payload.newText;
     },
-    removeCompletedTodos: (state) => (
-      // for (let i = state.length - 1; i >= 0; i--) {
-      //   if (state[i].completed) state.splice(i, 1);
-      // }
-      state.filter((item) => !item.completed)
-    )
+    removeCompletedTodos: (state) => state.filter((item) => !item.completed)
   }
 });
 

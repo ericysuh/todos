@@ -1,11 +1,12 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   visibility: 'all',
   list: [
-    { type: 'all' },
-    { type: 'active' },
-    { type: 'completed' }
+    { copy: 'All', type: 'all' },
+    { copy: 'Active', type: 'active' },
+    { copy: 'Completed', type: 'completed' }
   ]
 };
 
@@ -14,7 +15,6 @@ const filtersSlice = createSlice({
   initialState,
   reducers: {
     changeFilter: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
       state.visibility = action.payload;
     }
   }

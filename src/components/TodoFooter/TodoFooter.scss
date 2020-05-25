@@ -9,10 +9,6 @@ $parent-class: '.todo-footer';
   color: $text-color-secondary;
   font-weight: 300;
 
-  &__count {
-    padding: 4px 0;
-  }
-
   &__filters {
     margin: 0;
     padding: 0;

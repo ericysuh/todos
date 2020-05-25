@@ -44,7 +44,7 @@ export const getNumOfActiveItems = createSelector(
   (activeTodos) => activeTodos.length
 );
 
-export const getNumOfCompleted = createSelector(
+export const getHasCompleted = createSelector(
   [getCompletedTodos],
-  (completedTodos) => completedTodos.length
+  (completedTodos) => completedTodos.length > 0
 );
