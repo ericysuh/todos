@@ -2,6 +2,7 @@ import React from 'react';
 import TodoAdd from '../TodoAdd/TodoAdd';
 import TodoList from '../TodoList/TodoList';
 import TodoFooter from '../TodoFooter/TodoFooter';
+import FooterLinks from '../FooterLinks/FooterLinks';
 
 import './App.scss';
 
@@ -13,6 +14,7 @@ const App = () => (
       <TodoList />
       <TodoFooter />
     </section>
+    <FooterLinks />
   </>
 );
 

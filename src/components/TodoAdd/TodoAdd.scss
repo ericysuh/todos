@@ -14,7 +14,7 @@ $parent-class: '.todo-add';
   outline: none;
 
   &::placeholder {
-    color: $text-color-secondary;
+    color: $text-color-primary;
     font-style: italic;
   }
 }

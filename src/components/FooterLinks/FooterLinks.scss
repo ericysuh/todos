@@ -1,0 +1,25 @@
+@mixin link-style {
+  font-size: 18px;
+  font-weight: 100;
+  color: $text-color-tertiary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  background-size: 20px;
+  padding-left: 25px;
+}
+
+.footer-links {
+  text-align: center;
+
+  &__homepage {
+    background: no-repeat url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg width='463.89285' height='438.87704' xmlns='http://www.w3.org/2000/svg'%3E%3Cmetadata id='metadata7'%3Eimage/svg+xml%3C/metadata%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cg opacity='0.25' id='layer1'%3E%3Cpath d='m394.805786,223.095795l0,0zm0,0l-162.8125,-144.187508l-162.906235,144.250008l0,206.125c0,5.323364 4.30162,9.59375 9.625,9.59375l101.812515,0l0,-90.375c0,-5.323425 4.270355,-9.625 9.59375,-9.625l83.656219,0c5.323364,0 9.59375,4.301636 9.59375,9.625l0,90.375l101.84375,0c5.323364,0 9.593781,-4.270325 9.59375,-9.59375l0,-206.1875zm-325.718742,0.0625l0,0z' id='rect2391' stroke-miterlimit='4' stroke-width='0.4' fill='%237f7f7f'/%3E%3Cpath d='m231.048508,0l-231.048508,204.583557l24.33831,27.457397l207.655388,-183.884186l207.608109,183.884186l24.291046,-27.457397l-231.001236,-204.583557l-0.897919,1.0397l-0.94519,-1.0397z' id='path2399' stroke-miterlimit='4' stroke-width='0.4' fill='%237f7f7f'/%3E%3Cpath d='m69.087051,29.449039l58.571442,0l-0.510384,34.691097l-58.061058,52.451752l0,-87.142849z' id='rect2404' stroke-miterlimit='4' stroke-width='0.4' fill='%237f7f7f'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @include link-style;  
+  }
+
+  &__source-code {
+    background: no-repeat url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'%3E%3Csvg height='20' style='overflow:visible;enable-background:new 0 0 32 32' viewBox='0 0 32 32' width='20' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cg id='Github_1_'%3E%3Cpath d='M16,0C7.2,0,0,7.2,0,16 c0,8.8,7.2,16,16,16c8.8,0,16-7.2,16-16C32,7.2,24.8,0,16,0z M20,29.7c0-0.1,0-0.2,0-0.3c0-0.5,0-2.3,0-4.4 c0-1.5-0.5-2.5-1.1-3c3.6-0.4,7.3-1.8,7.3-7.9c0-1.7-0.6-3.2-1.6-4.3c0.2-0.4,0.7-2-0.2-4.2c0,0-1.3-0.4-4.4,1.6 c-1.3-0.4-2.6-0.5-4-0.5c-1.4,0-2.7,0.2-4,0.5C8.9,5.2,7.6,5.6,7.6,5.6C6.7,7.8,7.3,9.5,7.4,9.9c-1,1.1-1.6,2.5-1.6,4.3 c0,6.1,3.7,7.5,7.3,7.9c-0.5,0.4-0.9,1.1-1,2.1c-0.9,0.4-3.2,1.1-4.7-1.3c0,0-0.8-1.5-2.5-1.6c0,0-1.6,0-0.1,1 c0,0,1,0.5,1.8,2.3c0,0,0.9,3.1,5.4,2.1c0,1.3,0,2.3,0,2.7c0,0.1,0,0.2,0,0.2C6.2,27.9,2,22.6,2,16.3c0-7.7,6.3-14,14-14 c7.7,0,14,6.3,14,14C30,22.6,25.8,27.9,20,29.7z' id='Github' style='fill-rule:evenodd;clip-rule:evenodd;fill:%23C9CACC;'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    @include link-style;
+  }
+}

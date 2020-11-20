@@ -9,7 +9,7 @@ $parent-class: '.todo-filter';
   }
 
   &__link {
-    color: $text-color-primary;
+    color: $text-color-tertiary;
     text-decoration: none;
 
     display: inline-block;
@@ -21,12 +21,12 @@ $parent-class: '.todo-filter';
     
     &:focus,
     &:hover {
-      border-color: $border-color-primary;
+      border-color: $border-color-secondary;
     }
 
     &--selected {
       border-color: $border-color-secondary;
-      color: $text-color-secondary;
+      color: $text-color-tertiary;
 
       &:focus,
       &hover {

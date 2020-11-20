@@ -15,14 +15,14 @@ h1 {
   font-size: 80px;
   font-weight: 100;
   text-align: center;
-  color: $text-color-primary;
+  color: $text-color-secondary;
 }
 
 .todo {
   width: 90%;
   background: #fff;
   border: 1px solid $border-color-primary;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
