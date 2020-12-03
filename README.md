@@ -1,5 +1,10 @@
 # todos
 Customized starter app for using react + redux
+
+## Screenshot
+![Image of todos app]
+(https://github.com/ericysuh/portfolio/blob/master/images/todos-pic.jpg)
+
 ```
 Todos.eric-suh.com
 
@@ -20,3 +25,4 @@ Todos.eric-suh.com
 * Based on the Todo-MVC site. 
 * Included additional keyboard navigation function.
 * Fully responsive design.
+
