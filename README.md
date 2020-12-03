@@ -8,12 +8,11 @@ Customized starter app based on [Todo-MVC](http://todomvc.com/) site.
 ## Tech Stack
 - React
 - Redux (using redux-toolkit)
-- Sass 
+- Sass
 - Webpack
-- Eslint (extending airbnb's eslint rules)
+- Eslint
 
 ## Features
-
 - Based on the Todo-MVC site. 
 - Included additional keyboard navigation function.
 - Fully responsive design.
