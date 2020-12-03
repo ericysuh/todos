@@ -3,7 +3,7 @@ Customized starter app for using react + redux
 
 ## Screenshot
 ![Image of todos app]
-(https://github.com/ericysuh/portfolio/blob/master/images/todos-pic.jpg)
+(https://raw.githubusercontent.com/ericysuh/portfolio/master/images/todos-pic.jpg?token=ANWBD37HNZJJFP7SXKDRZ2S7ZA5SW)
 
 ```
 Todos.eric-suh.com
