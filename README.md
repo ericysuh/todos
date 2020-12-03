@@ -2,7 +2,7 @@
 Customized starter app for using react + redux
 
 ## Screenshot
-![](images/todos-pic.jpg)
+![](image/todos-pic.jpg)
 
 ```
 Todos.eric-suh.com
