@@ -1,27 +1,19 @@
-# todos
-Customized starter app for using react + redux
+# Todos App
+Customized starter app based on [Todo-MVC](http://todomvc.com/) site.
+![Todo App Screenshot](image/todos-pic.jpg)
 
-```
-Todos.eric-suh.com
+[Demo Site](https://todos-eric-suh.com)
 
-//
+## Tech Stack
 - React
 - Redux (using redux-toolkit)
-- Sass (/w resource loader for variables, mixins, etc)
-
-//
-- Webpack (bundler) + dev server
-- Babel (transpiler)
+- Sass 
+- Webpack
 - Eslint (extending airbnb's eslint rules)
-- Stylelint
-- Husky/Lint-staged
-```
+
 ## Features
 
 * Based on the Todo-MVC site. 
 * Included additional keyboard navigation function.
 * Fully responsive design.
-
-## Screenshot
-![](image/todos-pic.jpg)
 
