@@ -2,6 +2,7 @@
 Customized starter app based on [Todo-MVC](http://todomvc.com/) site.
 
 ![Todo App Screenshot](image/todos-pic.jpg)
+
 [Demo Site](https://todos-eric-suh.com)
 
 ## Tech Stack
